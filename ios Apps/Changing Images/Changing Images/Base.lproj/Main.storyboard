@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Changing_Images" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_00_delay-0.1s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="zXw-Z3-kuh">
+                                <rect key="frame" x="0.0" y="211" width="375" height="291"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="1M2-am-xHM"/>
+                                    <constraint firstAttribute="height" constant="291" id="v8F-lC-B9R"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlu-JX-YYP">
+                                <rect key="frame" x="124" y="114" width="127" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="1kA-Dk-C6E"/>
+                                    <constraint firstAttribute="height" constant="36" id="Oqa-Ak-vxX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynV-oV-4Xp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paint A Rainbow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBz-KS-iRc">
+                                <rect key="frame" x="100.5" y="54" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPS-Bv-4qV">
+                                <rect key="frame" x="160" y="544" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Slide"/>
+                                <connections>
+                                    <action selector="SlideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDj-fK-lXB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPW-GM-YtE">
+                                <rect key="frame" x="283" y="544" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="GrowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fO5-QP-pUB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-pD-rZn">
+                                <rect key="frame" x="49" y="544" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fate"/>
+                                <connections>
+                                    <action selector="FateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBn-e4-rKx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qlu-JX-YYP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="6yh-Fi-MQo"/>
+                            <constraint firstItem="mBz-KS-iRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNo-J2-ccv"/>
+                            <constraint firstItem="zXw-Z3-kuh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="191" id="iCy-PW-vC2"/>
+                            <constraint firstItem="mBz-KS-iRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="oXa-qL-G7u"/>
+                            <constraint firstItem="zXw-Z3-kuh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qKk-WN-Bv8"/>
+                            <constraint firstItem="Qlu-JX-YYP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s33-Hd-QtB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Qlu-JX-YYP" id="gfn-k4-hvA"/>
+                        <outlet property="image" destination="zXw-Z3-kuh" id="acM-cx-nd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame_00_delay-0.1s.gif" width="500" height="500"/>
+    </resources>
+</document>
