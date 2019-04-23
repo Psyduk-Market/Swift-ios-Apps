@@ -16,15 +16,17 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        // NSManagedObjectContext (address of its location)
         let context = appDelegate.persistentContainer.viewContext
         
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
         
+        /*
         
         // This is where user initialise thier username, password and age
-        newUser.setValue("Thyme", forKey: "username")
+        newUser.setValue("Tom", forKey: "username")
         newUser.setValue("mypass", forKey: "password")
-        newUser.setValue(35, forKey: "age")
+        newUser.setValue(4, forKey: "age")
         
         do {
             
@@ -37,9 +39,15 @@ class ViewController: UIViewController {
             print("There is an error")
             
         }
+ 
+        */
         
         // This will sent a request to entity
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        // Advanced Core Data
+        // The line below contain NSPredicate can use to get data from storage
+//        request.predicate = NSPredicate(format: "username = %@", "Harvey")
         
         request.returnsObjectsAsFaults = false
         
@@ -51,6 +59,33 @@ class ViewController: UIViewController {
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
                     if let username = result.value(forKey: "username") as? String {
+                        
+//                        context.delete(result)
+//
+//                        do {
+//
+//                            try context.save()
+//
+//                        } catch {
+//                            print("Failed to save")
+//                        }
+                        
+                        // This is to edit/change the argument from "request.predicate" to what you need
+                        // In this case argument is "Tom" that under username as string
+                        // The line below will check if there is a username called "Tom"
+                        // If there is one it will set "Tom" to "Harvey" and the rest of details will remain
+                        // the same
+                        /*
+                        result.setValue("Harvey", forKey: "username")
+                        
+                        do {
+                            
+                            try context.save()
+                            
+                        } catch {
+                            print("Failed to save")
+                        }
+                        */
                         print(username)
                     }
                 }
@@ -68,3 +103,9 @@ class ViewController: UIViewController {
 
 }
 
+/* Instruction:
+ - Use predicate to set a condition for what you want from core data
+ - .fetch() is to send request to core data and expect data return from it
+ - From returned data from core data, to access particular attribute from an entity use .value(forKey: "***")
+ - delete(), save() are part of NSManagedObjectContext
+*/
